@@ -1,4 +1,4 @@
-#the not so Useless Box
+# the not so Useless Box
 A Useless Box which is not useless because it shows the state of opening of Le Petit Fablab de Paris on the site and sends a message on discord when it is activated. 
 after a certain time (about 3h30) it closes by itself, sending a message on discord and deleting the status on the website
 if someone turns off the switch before the end of the time, the box sends a message on discord directly and removes the status on the website

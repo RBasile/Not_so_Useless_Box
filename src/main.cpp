@@ -24,7 +24,7 @@ const String DISCORD_WEBHOOK = "Your Token";
 Discord_Webhook discord; // Create a Discord_Webhook object 
 const String autoCloseMessage[4] = {"Le Lab est/va bientôt fermé","J'ai fermé la Boite","Je me suis fermé toute seule","Le Chat est parti dormir :cat::zzz:"};
 const String OpenMessage[4] = {"Le Lab est ouvert","Je vient d'être ouverte","Un Chat vient d'apparaitre :smiley_cat:","Coucou venez au Petit Fablab"};
-const String CloseMessage[4] = {"Le Lab est fermé","Je viens de me faire fermé","Le Chat est parti en courant :cat2:","Bonne nuit le LPFP"};
+const String CloseMessage[4] = {"Le Lab est fermé","Je viens de me faire fermer","Le Chat est parti en courant :cat2:","Bonne nuit le LPFP"};
 
 String htmlReply = "O";
 
