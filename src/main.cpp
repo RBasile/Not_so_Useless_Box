@@ -74,7 +74,7 @@ bool rainbow(bool fast) { //Modified Rainbow cycle to handle WebServer and early
     byte buttonState = digitalRead(buttonPin);
     if (buttonState == HIGH) {delay(30);return 1;break;}
     if (fast){
-      for(int pos=0; pos<190; pos++) {
+      for(int pos=0; pos<240; pos++) { // value of pos max is equal to =time to wait( in hour ) * 60
         delay(1);
         server.handleClient();
       }
@@ -105,13 +105,20 @@ void boxOpen(){
   discord.send(OpenMessage[random(0,4)]);
   myservo.write(0);
 
-  bool earlyClose = rainbow(1);            // Flowing rainbow cycle along the whole strip: 0 for fast 1 for 3.5 hour rainbow
+  bool earlyClose = rainbow(1);            // Flowing rainbow cycle along the whole strip: 0 for fast 1 for 4 hour rainbow
 
   myservo.write(160);
   while (buttonState == LOW){
     buttonState = digitalRead(buttonPin);
   }
   myservo.write(100);
+  
+  while (buttonState == LOW){ // make sure that the switch is off
+    delay(50);
+    myservo.write(170);
+    buttonState = digitalRead(buttonPin);
+  }
+
   for(int pos=100; pos>0; pos--) {
     myservo.write(pos);
     delay(5);
